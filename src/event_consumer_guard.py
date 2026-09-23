@@ -2,7 +2,15 @@
 
 from __future__ import annotations
 
-EVENT_KINDS = ['EVENT_PUBLISHED', 'MERCHANT_COMMITMENT', 'BENEFIT_REDEEMED', 'COMPLAINT_OPENED', 'REMEDY_SETTLED']
+EVENT_KINDS = [
+    'EVENT_PUBLISHED',
+    'TRANSACTION_PROOF',
+    'MERCHANT_COMMITMENT',
+    'BENEFIT_REDEEMED',
+    'COMPLAINT_OPENED',
+    'REMEDY_SETTLED',
+    'JOINT_CASE_UPDATED',
+]
 REQUIRED_FIELDS = ("event_id", "kind", "occurred_at", "subject_id", "payload")
 
 def validate_event(record: dict) -> list[str]:
